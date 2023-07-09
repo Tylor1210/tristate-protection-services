@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tri-State Protection Services" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="app.js" defer></script>
+    <title>Tri-State Protection Services</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="brand">
+                <a href="index.html"><img src="images/logo5.png" ></a>
+            </div>
+            <button aria-label="toggle menu" id="responsiveMenuToggleButton">
+                <!-- Heroicons.com -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="openIcon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="closeIcon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="navbar-links">
+                <ul>
+                    <button class="btn"><i class="fa fa-home"></i> Home</button>
+                    <button class="btn default"></i>  About Us</button>
+                    <button class="btn default">Services</button>
+                    <button class="btn default"><i class="fa fa-phone"></i>Contact</button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            
+            
+        </section>
+        <section id="description">
+            <h2>Who we are.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore reprehenderit saepe exercitationem nostrum quo ipsam sit, nisi magni excepturi rerum quas assumenda laborum recusandae inventore fugit incidunt odio est quibusdam.</p>
+        </section>
+    </main>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <button id="closeButton" class="close-button">&times;</button>
+            <h3>Subscribe to our Newsletter</h3>
+            <p>Get the latest updates and news delivered straight to your inbox.</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" id="emailInput" placeholder="Enter your email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

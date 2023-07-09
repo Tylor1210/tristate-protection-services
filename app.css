@@ -1,0 +1,264 @@
+:root{
+    --light-text: rgb(217, 215, 215);
+    --white: rgb(254, 253, 253);
+}
+
+body {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+section#hero{
+    background-image: url(./images/46319-SecurityRadio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section#hero h1{
+    padding: 1rem;
+    font-size: 3rem;
+    color: var(--white);
+}
+
+section#description {
+    padding: 1rem;
+}
+section#description p {
+    font-family: sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0, 0.2);
+
+}
+.navbar .brand {
+    padding: 0.75rem 1rem;
+    color: var(--light-text);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.navbar-links ul {
+    margin: 0;
+    padding-right: 1rem;
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    font-family: sans-serif;
+
+}
+
+.navbar-links ul li a {
+    color: var(--light-text);
+    text-decoration: none;
+}
+
+#responsiveMenuToggleButton {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#responsiveMenuToggleButton svg{
+    height: 3.5rem;
+    width: 3.5rem;
+    color: var(--light-text);
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+}
+
+#responsiveMenuToggleButton .openIcon {
+    display: block;
+}
+
+#responsiveMenuToggleButton .closeIcon {
+    display: none;
+}
+
+#responsiveMenuToggleButton.open .openIcon {
+    display: none;
+}
+
+#responsiveMenuToggleButton.open .closeIcon {
+    display: block;
+}
+
+div.brand img{
+    width: 100px;
+    height: 100px;
+}
+
+/* Style buttons */
+.btn {
+    background-color: black; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: gray;
+  }
+
+/* MEDIA QUERY SCREEN < 600PX */
+@media screen and (max-width: 600px) {
+    #responsiveMenuToggleButton{
+        display: block;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links{
+        width: 100%;
+        display: none;
+    }
+
+    div.brand img{
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    
+    .navbar-links{
+        display: none;
+    }
+
+    .navbar-links.open{
+        display: block;
+    }
+
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+}
+
+
+/* POPUP */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.popup-content {
+    max-width: 400px;
+    margin: 10% auto;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.popup h3 {
+    margin-top: 0;
+}
+
+.popup p {
+    margin-bottom: 20px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-form {
+    display: flex;
+    justify-content: center;
+}
+
+.popup-form input[type="email"] {
+    padding: 10px;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.popup-form button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Additional styling to hide the input and button until the popup is shown */
+.popup.hidden .popup-form input[type="email"],
+.popup.hidden .popup-form button {
+    display: none;
+}
+
+
+/* IMAGE CAROUSEL MAIN */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slide-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.slide-text p {
+    font-size: 1.2rem
+}
