@@ -13,10 +13,11 @@ section#hero{
     background-image: url(./images/46319-SecurityRadio.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 400px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
 }
 
@@ -154,6 +155,7 @@ div.brand img{
         padding: 1rem;
         background-color: rgba(0, 0, 0, 0.8);
     }
+    
 
 }
 
@@ -261,4 +263,56 @@ div.brand img{
 
 .slide-text p {
     font-size: 1.2rem
+}
+
+/* Image Slider */
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: 150px 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.slider-nav button {
+    background-color: #ccc;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Additional styles for responsive layout */
+@media screen and (max-width: 600px) {
+    .card {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }

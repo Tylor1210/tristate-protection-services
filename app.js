@@ -54,5 +54,36 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Image Carousle Main //
+// Image Slider Main //
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.slider');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+
+    let currentPosition = 0;
+    const cardWidth = slider.querySelector('.card').offsetWidth;
+    const totalCards = slider.querySelectorAll('.card').length;
+    const visibleCards = 3;
+
+    function updateSliderPosition() {
+        slider.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
+    }
+
+    function showNextCard() {
+        if (currentPosition < totalCards - visibleCards) {
+            currentPosition++;
+            updateSliderPosition();
+        }
+    }
+
+    function showPrevCard() {
+        if (currentPosition > 0) {
+            currentPosition--;
+            updateSliderPosition();
+        }
+    }
+
+    nextButton.addEventListener('click', showNextCard);
+    prevButton.addEventListener('click', showPrevCard);
+});
 
